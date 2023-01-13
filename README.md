@@ -3,3 +3,4 @@ usos:
     bootstrap - 
 
     console.firebase.com.br (criar firebase na FFFF)
+    link video "https://www.youtube.com/watch?v=GRplxhkBbhE"

@@ -1,5 +1,5 @@
 import './App.css'
-import { CadastroCliente } from './components/receita/NotasFiscais';
+import { CadastroCliente } from './components/cadastros/CadastroCliente';
 
 export function App() {
   return (

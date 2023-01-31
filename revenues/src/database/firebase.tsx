@@ -1,6 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyDgu6sVKbBvv7rcQBkjz7XfdbWlH8ar5RA",
@@ -12,8 +10,4 @@ const firebaseConfig = {
   measurementId: "G-WKJ16RNDTK"
 };
 
-
-let fireDb = firebase.initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
-
-export default fireDb.database().ref()
+export const fireDb = initializeApp(firebaseConfig);

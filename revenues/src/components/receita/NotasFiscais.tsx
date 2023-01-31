@@ -1,15 +1,15 @@
-import { NotasFiscais } from "../cadastros/CadastroCliente"
-import fireDb from '../../../firebase'
+import { fireDb } from  "../../database/firebase"
+import { CadastroCliente } from "../cadastros/CadastroCliente"
 
 
-export const CadastroCliente = () => {
+export const NotasFiscais = () => {
 
-    const edicaoDeDados = (obj:any) => {
+    const edicaoDeDados = obj => {
         fireDb.child('clientes').push(
             obj, 
             (error:any) => {
                 if(error){
-                    console.log(error)
+                    console.log(`esta com erro` + error)
                 }
         })
     }
@@ -26,7 +26,7 @@ export const CadastroCliente = () => {
             </div>
             <div className="row">
                 <div>
-                    < NotasFiscais edicaoDeDados={edicaoDeDados} />
+                    < CadastroCliente edicaoDeDados={edicaoDeDados} />
                 </div>
                 <div>
                     <h2>Notas Fiscais - Clientes</h2>

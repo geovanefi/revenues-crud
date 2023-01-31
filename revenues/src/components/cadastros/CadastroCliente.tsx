@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const NotasFiscais = (props:any) => {
+export const CadastroCliente = (props:any) => {
     
     //input de dados
     const dadosIniciais = {
@@ -14,11 +14,11 @@ export const NotasFiscais = (props:any) => {
     let { values, setValues } = useState( dadosIniciais)
 
     const imputChange = (e:any) => {
-        let { nomeCompleto, value} = e.target
+        let { name, value} = e.target
 
         setValues({
             ...values,
-            [nomeCompleto]: value
+            [name]: value
         })
     }
 
@@ -39,7 +39,7 @@ export const NotasFiscais = (props:any) => {
                 <input className="form-control" 
                     placeholder="1º dados a inserir" 
                     name="nomeCompleto" 
-                    value={ values.nomeCompleto} 
+                    value={values.nomeCompleto} 
                     onChange={imputChange}
                 />
             </div>
@@ -85,6 +85,13 @@ export const NotasFiscais = (props:any) => {
                         value={values.dadosAdicionais }
                         onChange={imputChange} 
                     />
+
+                    <div className="form-group">
+                        <input 
+                        type="submit" 
+                        value="Save" 
+                        className="btn btn-primary btn-block" />
+                    </div>
                 </div>
             </div>
         </form>
